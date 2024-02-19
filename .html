@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU LOVE ME?</title>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+    
+    <form>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="love" value="yes">
+        
+        <label for="no">No</label>
+        <input type="radio" id="no" name="love" value="no">
+        
+        <button type="button" onclick="checkLove()">Submit</button>
+    </form>
+
+    <script>
+        function checkLove() {
+            var loveValue = document.querySelector('input[name="love"]:checked');
+
+            if (loveValue) {
+                alert("You chose: " + loveValue.value);
+            } else {
+                alert("Please select Yes or No.");
+            }
+        }
+    </script>
+</body>
+</html>
